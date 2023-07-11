@@ -22,7 +22,7 @@ export default async function NotesPage() {
         <CreateNote />
       </div>
       <div className="p-8 w-3/4">
-        <div className="grid grid-cols-3 gap-6 mt-16">
+        <div className="grid grid-cols-3 gap-8 mt-16">
           {notes?.map((note) => {
             return <Note key={note.id} note={note} />;
           })}
@@ -42,7 +42,7 @@ function Note({ note }: any) {
 
   return (
     <Link href={`notes/${id}`}>
-      <div className="bg-yellow-50 p-4 shadow">
+      <div className="bg-yellow-50 p-4 shadow-md">
         <h3 className="text-xl text-slate-600 font-bold">{title}</h3>
         <p>{content}</p>
         <span className="text-sm text-slate-400 mt-12 block">
